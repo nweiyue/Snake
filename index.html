@@ -14,13 +14,14 @@
             justify-content: center;
             align-items: center;
             margin: 0;
-            background-color: grey;
+            background-color: #111f28;
         }
 
         #score-bar {
             background-color: black;
             width: 90vmin;
             border: .25vmin solid white;
+        
         }
 
         h4 {
@@ -29,8 +30,13 @@
             font-family: 'Press Start 2P', cursive;
             color: whitesmoke;
             font-size: smaller;
+            float: left;
         }
 
+        #instruction {
+            float: right;
+            margin-right: 10px;
+        }
 
         #game-board {
             background-color: black;
@@ -61,6 +67,7 @@
 <body>
     <div id = "score-bar">
         <h4 id = "score"></h4>
+        <h4 id = "instruction"></h4>
     </div> 
     <div id = "game-board"></div>
 </body>
