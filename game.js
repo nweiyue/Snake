@@ -11,6 +11,7 @@ let gameOver = false
 let score = 0;
 const gameBoard = document.getElementById("game-board")
 const scoreBar = document.getElementById("score")
+const instruction = document.getElementById("instruction")
 let scoreUpdate = 0
 
 function main(currentTime) {
@@ -49,6 +50,7 @@ function draw() {
     drawSnake(gameBoard)
     drawFood(gameBoard)
     scoreBar.innerHTML = "Score:" + score
+    instruction.innerHTML = "Use arrow keys to move"
 }
 
 function checkDeath() {
