@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-color: grey;
+        }
+
+        #score-bar {
+            background-color: black;
+            width: 100vmin;
+            border: .25vmin solid white;
+        }
+
+        h4 {
+            margin-left: 10px;   
+            line-height: 0%;
+            font-family: 'Press Start 2P', cursive;
+            color: whitesmoke;
+            font-size: smaller;
+        }
+
+
+        #game-board {
+            background-color: black;
+            /* Ensure that the game-board is always a square */
+            width: 100vmin;
+            height: 100vmin;
+            display: grid;
+            /* Allow for 21 even-sized squares. repeat(21, 1fr) will do the job */
+            grid-template-rows: repeat(21, 1fr); 
+            grid-template-columns: repeat(21, 1fr);
+            border: .25vmin solid white;;
+        }
+
+        .snake {
+            background-color: white;
+            border: .25vmin solid black;
+        }
+
+        .food {
+            background-color: red;
+            border: .25vmin solid black;
+        }
+
+    </style>
+    <!-- importing the game from js -->
+    <script src="game.js" defer type="module"></script>
+</head>
+<body>
+    <div id = "score-bar">
+        <h4 id = "score"></h4>
+    </div> 
+    <div id = "game-board"></div>
+</body>
+</html>
